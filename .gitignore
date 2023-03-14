@@ -17,8 +17,10 @@ out
 # Gradle
 build
 .gradle
+gradle
 gradlew
 gradlew.bat
 
 # Forge
 run
+
