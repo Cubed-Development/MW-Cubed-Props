@@ -1,5 +1,7 @@
 package com.paneedah.mwcp;
 
+import com.paneedah.mwcp.init.MWCPTiles;
+import com.paneedah.mwcp.init.MWCPMisc;
 import com.paneedah.mwcp.proxy.CommonProxy;
 import com.paneedah.mwcp.utils.ModReference;
 import net.minecraftforge.fml.common.Mod;
@@ -21,22 +23,23 @@ public class ModernWarfareProps {
     public static CommonProxy proxy;
 
     public ModernWarfareProps() {
-
+        MWCPTiles.init();
+        MWCPMisc.init();
     }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent preInitializationEvent) {
-
+        proxy.preInit();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent initializationEvent) {
-
+        proxy.init();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent postInitializationEvent) {
-
+        proxy.postInit();
     }
 
 }
